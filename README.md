@@ -249,6 +249,64 @@ When KV-cache operations are unavailable, the daemon falls back to text serializ
 
 This is a specification and reference implementation. The spec (SPEC_v2.3.md) is stable. Implementation is in progress.
 
+## Specification Reference
+
+The full specification is in [SPEC_v2.3.md](SPEC_v2.3.md). Section overview:
+
+### Core Architecture
+
+| Section | Description |
+|---------|-------------|
+| [1. Overview](SPEC_v2.3.md#1-overview) | Thesis, design principles, two-layer architecture, ring model, backend compatibility matrix |
+| [2. Filesystem Structure](SPEC_v2.3.md#2-filesystem-structure) | Top-level layout, file semantic classes, anti-bankruptcy protocols, atomic writes, cost visibility |
+
+### Runtime Components
+
+| Section | Description |
+|---------|-------------|
+| [3. Agents](SPEC_v2.3.md#3-agents) | Agent directories, configuration schema, invocation patterns, sessions, queue management, compiled agents (.aexe) |
+| [4. Processes](SPEC_v2.3.md#4-processes) | Process directories, control signals, exit codes, spawning, core dumps, intent approval authorization |
+| [5. Context Management](SPEC_v2.3.md#5-context-management) | Context structure, binding, checkpointing, pressure handling, block visualization |
+| [6. Conversations](SPEC_v2.3.md#6-conversations) | Conversation directories, metadata, manifests, resuming, forking, session vs turn model, retention |
+| [7. Memory](SPEC_v2.3.md#7-memory) | Persistent knowledge store, memory operations, access control |
+
+### I/O and Integration
+
+| Section | Description |
+|---------|-------------|
+| [8. Channels](SPEC_v2.3.md#8-channels) | Human approval flows, notification channels, job queues, channel configuration |
+| [9. External Mounts](SPEC_v2.3.md#9-external-mounts) | Mount command, destructive operations, pagination, caching, cost visibility for external APIs |
+| [10. Models](SPEC_v2.3.md#10-models) | Model directory structure, pricing information, availability status |
+| [11. Tools](SPEC_v2.3.md#11-tools) | Tool schema, cost model, plugin installation, MCP integration, auto-generated man pages |
+
+### System
+
+| Section | Description |
+|---------|-------------|
+| [12. Security](SPEC_v2.3.md#12-security) | Three-level coloring (trusted/agent/untrusted), contamination rules, capability model and intersection |
+| [13. Observability](SPEC_v2.3.md#13-observability) | Tracing, metrics, logging infrastructure |
+| [14. Resource Management](SPEC_v2.3.md#14-resource-management) | Budget enforcement, resource limits, quota management |
+| [15. System Configuration](SPEC_v2.3.md#15-system-configuration) | Global daemon configuration, per-user settings |
+| [16. Shell Integration](SPEC_v2.3.md#16-shell-integration) | Bash/zsh completions, environment setup, prompt integration |
+
+### Reference
+
+| Section | Description |
+|---------|-------------|
+| [17. CLI Reference](SPEC_v2.3.md#17-cli-reference) | Complete `aos` command documentation |
+| [18. Daemon Operations](SPEC_v2.3.md#18-daemon-operations) | Starting, stopping, health checks, log management |
+| [19. JSONL Event Schema](SPEC_v2.3.md#19-jsonl-event-schema) | Event format for traces, logs, and tool calls |
+| [20. Determinism and Reproducibility](SPEC_v2.3.md#20-determinism-and-reproducibility) | Record/replay, mock backends, testing infrastructure |
+
+### Appendices
+
+| Section | Description |
+|---------|-------------|
+| [Appendix A: Quick Reference](SPEC_v2.3.md#appendix-a-quick-reference) | Exit codes, common commands, file paths |
+| [Appendix B: Filesystem Layout](SPEC_v2.3.md#appendix-b-filesystem-layout-summary) | Complete directory tree reference |
+| [Appendix C: Shebang Reference](SPEC_v2.3.md#appendix-c-shebang-reference) | Executable agent syntax |
+| [Appendix D: Future Work](SPEC_v2.3.md#appendix-d-future-work-deferred) | Deferred features and design decisions |
+
 ## Related Work
 
 - [Zed's agent abstraction](https://zed.dev/) - Editor-integrated agent system
