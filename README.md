@@ -68,7 +68,7 @@ aos fork /aos/conversations/2025/01/04/a3f8c2/ \
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                     Model Backends                          │
-│   vLLM  │  SGLang  │  llama.cpp  │  OpenAI  │  Anthropic   │
+│   vLLM  │  SGLang  │  llama.cpp  │  OpenAI  │  Anthropic    │
 └─────────────────────────────────────────────────────────────┘
 ```
 
