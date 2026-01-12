@@ -1,6 +1,8 @@
 # Agent OS
 
-A Unix-native runtime for LLM agents. Agents interact via filesystem paths and CLI commands rather than framework-specific APIs.
+A Unix-native runtime for LLM agents built on [FUSE](https://en.wikipedia.org/wiki/Filesystem_in_Userspace) (Filesystem in Userspace). Agents interact via filesystem paths and CLI commands rather than framework-specific APIs.
+
+See [objective.md](objective.md) for the full rationale behind this design.
 
 ## Thesis
 
